@@ -13,7 +13,7 @@ load_dotenv()
 os.environ['OPENAI_API_KEY'] = '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'
 openai.api_key = os.environ.get("OPENAI_API_KEY")
 
-loader = TextLoader("./Saudi Labor Law.txt", encoding='utf-8')
+loader = TextLoader("./Labor_rules_v0.1.txt", encoding='utf-8')
 documents = loader.load()
 text_splitter = CharacterTextSplitter(chunk_size=3000, chunk_overlap=0)
 texts = text_splitter.split_documents(documents)
@@ -55,7 +55,7 @@ def gpt():
             ]
         )
 
-        #print(completion)
+        print(completion)
 
         return jsonify(answer=completion.choices[0].message.content)
     except Exception as e:
