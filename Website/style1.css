@@ -1,0 +1,56 @@
+
+body {
+    background-image: url('background.avif');
+
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+    gap: 40px;
+    font-family: 'Tajawal';font-size: 22px;
+}
+.container {
+    max-width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 100px;
+}
+input[type="text"] {
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    border-color: #79a5a6;
+    background-color: #40a2a4;
+}
+
+#welcomeMessage {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+
+}
+.pargrap {
+    text-align: right;
+    margin: 10px;
+    font-size: 30px;
+    color: #000000;
+}
+img {
+height: 100px;
+margin: 40px;
+}
+button {
+    padding: 10px;
+    background-color: #fcb513;
+    border: none;
+    margin-top: 10px;
+    height: 40px;
+    width: 80px;
+    color: #fff;
+    border-radius: 10px;
+}
+#mainlogo {
+    float: right;
+    margin-right: -260px;
+}
