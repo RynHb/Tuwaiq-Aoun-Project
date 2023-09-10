@@ -8,16 +8,18 @@ from langchain.vectorstores import Chroma
 from nltk.tokenize import word_tokenize
 import arabicstopwords.arabicstopwords as stp
 from nltk.stem import ISRIStemmer
+import chromadb
+
 nltk.download('punkt')
 import openai
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates', static_folder='static')
 load_dotenv()
 
 openai.api_key = os.environ.get("OPENAI_API_KEY")
 
-loader = TextLoader("formatted_Labor_rules_v0.1.txt", encoding='utf-8')
+loader = TextLoader("formatted_Labor-rules.txt", encoding='utf-8')
 documents = loader.load()
 text_splitter = CharacterTextSplitter(chunk_size=2000, chunk_overlap=0)
 texts = text_splitter.split_documents(documents)
@@ -32,13 +34,16 @@ if embed_and_save:
 else:
     print("Load embeddings ..")
     store = Chroma(embedding_function=embeddings, persist_directory="./chroma_db", collection_name="work-system")
-    #print(len(store.get()['ids']))
-
+    # print(len(store.get()['ids']))
 
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index1.html')
+
+@app.route('/static/index2.html')
+def chatbot():
+    return render_template('index2.html')
 
 @app.route('/gpt', methods=['POST'])
 def gpt():
@@ -50,11 +55,11 @@ def gpt():
     stemmed_words = [stemmer.stem(word) for word in filtered_words]
     preprocessed_question = (' '.join(stemmed_words))
 
-    relevant_chunk = store.similarity_search_with_score(preprocessed_question, k=6)
+    relevant_chunk = store.similarity_search_with_score(preprocessed_question, k=1)
 
     relevant_chunk = relevant_chunk[0][0].page_content
 
-    #print(relevant_chunk)
+    # print(relevant_chunk)
 
     try:
         completion = openai.ChatCompletion.create(
@@ -66,7 +71,7 @@ def gpt():
             ]
         )
 
-        #print(completion)
+        # print(completion)
 
         return jsonify(answer=completion.choices[0].message.content)
     except Exception as e:

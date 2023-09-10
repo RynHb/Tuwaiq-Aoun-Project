@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html dir="rtl" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
+    <title>عون</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style2.css') }}">
+
+</head>
+<body>
+<main>
+    <img src="/static/images/logo.png" alt="logo">
+    <section>
+        <div class="card">
+            <div class="heading">
+                <h3>اسئل عون</h3>
+                <span class="label">
+          </span>
+            </div>
+            <p>
+                بإمكانك الاستفسار عن قوانين العمل والحصول على إجابة من خلال المجيب
+                الذكي
+            </p>
+            <form method="post" action="/gpt">
+                <input
+                        type="text"
+                        name="question"
+                        placeholder="أكتب سؤالك هنا .."
+                        required=""
+                />
+                <input type="submit" value="إسئل"/>
+            </form>
+
+            <div class="dot-pulse"></div>
+
+            <div class="result"></div>
+        </div>
+    </section>
+</main>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+<div class="bubbles">
+    <span style="--i:11;"></span>
+    <span style="--i:12;"></span>
+    <span style="--i:24;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:11;"></span>
+
+</div>
+<div class="bubbless">
+    <span style="--i:11;"></span>
+    <span style="--i:12;"></span>
+    <span style="--i:24;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:11;"></span>
+</div>
+</body>
+</html>
