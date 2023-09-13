@@ -12,7 +12,7 @@
 | ✅ |  |  |  | Dataset Preprocessing |
 | ✅ | ✅ | ✅ |  | Python Model |
 |  |  | ✅ | ✅ | Website |
-| ✅ | ✅ |  | ✅ | Video Demo Montage |
+| ✅ | ✅ | ✅ | ✅ | Video Demo Montage |
 |  | ✅ |  |  | PowerPoint Presentation |
 | ✅ | |  |  | Readme File |
 
