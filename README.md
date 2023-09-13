@@ -8,7 +8,7 @@
 ## أعضاء الفريق 👥
 <div dir="rtl" align="center">
 
-| ريان العوفي | عبدالمحسن آل بريد | طيف الشمراني | محمد ابا الخيل | |
+| [ريان العوفي](https://github.com/RynHb) | [عبدالمحسن آل بريد](https://github.com/AbdulmohsenAlbareed) | طيف الشمراني | محمد ابا الخيل | |
 | :---: | :---: | :---: | :---: | --- |
 | ✅ |  |  |  | Dataset Preprocessing |
 | ✅ | ✅ | ✅ |  | Python Model |
@@ -47,7 +47,11 @@
 
 ## تجربة البرنامج 🚀
 
-**3 امثلة بالصور**
+![image](https://github.com/RynHb/Tuwaiq-Capstone/assets/62115163/23716481-851a-4745-98d8-3a67f292f7b2)
+---
+![image](https://github.com/RynHb/Tuwaiq-Capstone/assets/62115163/a62d390e-44a9-485b-8f19-78181260cd66)
+---
+![image](https://github.com/RynHb/Tuwaiq-Capstone/assets/62115163/377e5c17-92ff-42d1-8618-50a52d5c092d)
 
 
 ## النتائج النهائية 📦
