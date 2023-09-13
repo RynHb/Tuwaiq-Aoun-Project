@@ -8,7 +8,7 @@
 ## أعضاء الفريق 👥
 <div dir="rtl" align="center">
 
-| [ريان العوفي](https://github.com/RynHb) | [عبدالمحسن آل بريد](https://github.com/AbdulmohsenAlbareed) | طيف الشمراني | محمد ابا الخيل | |
+| [ريان العوفي](https://github.com/RynHb) | [عبدالمحسن آل بريد](https://github.com/AbdulmohsenAlbareed) | [طيف الشمراني](https://github.com/Taef-alshamrani) | [محمد ابا الخيل](https://github.com/Mabulkhail) | |
 | :---: | :---: | :---: | :---: | --- |
 | ✅ |  |  |  | Dataset Preprocessing |
 | ✅ | ✅ | ✅ |  | Python Model |
