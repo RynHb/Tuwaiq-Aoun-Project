@@ -1,0 +1,148 @@
+<html dir="rtl">
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
+    <title>عون</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+
+  </head>
+  <body>
+    <header>
+      <img
+        onClick="goToLanding()"
+        src="{{ url_for('static', filename='images/logo.png') }}"
+        alt="logo"
+        id="logo"
+      />
+      <a id="whous"  onClick="goToWhoUs()">من نحن؟</a>
+    </header>
+
+    <div class="lines">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <main id="landingPage">
+      <div>
+        <div class="paragraph">
+          عون، مساعدك الذكي في نظام العمل السعودي للاستفسار بأي بند او حالة
+          متعلقة بالنظام و يوفر عليك عون الوقت و الجهد و العناء للوصول للمعلومة،
+          يهدف عون لتحقيق مستهدفات الروية للمملكة العربية السعودية 2030 للأتمتة.
+        </div>
+        <button id="goToChatbot" onclick="goToChatbot();">بدء الخدمة</button>
+      </div>
+
+      <img
+        id="brand"
+        src="{{ url_for('static', filename='images/Chatbot.png') }}"
+        alt="AI"
+      />
+    </main>
+
+    <main id="chatbotPage">
+      <section>
+        <h3>اسأل عون</h3>
+        <p>
+          بإمكانك الاستفسار عن قوانين العمل والحصول على إجابة من خلال عون
+        </p>
+        <form method="post" action="/gpt">
+          <input
+            type="text"
+            name="question"
+            placeholder="أكتب سؤالك هنا .."
+            required=""
+          />
+          <input type="submit" value="اسأل" />
+          <div class="dot-pulse"></div>
+          <div class="result"></div>
+        </form>
+      </section>
+    </main>
+    <main id="WhoUsPage">
+      <section class="carding">
+      <div>
+      <h3>فريق العمل </h3>
+      <ul class="horizontal-list">
+        <li>عبدالمحسن آل بريد
+          <ul>
+          <li class="linkdn"><a class="linkdnc" href="https://www.linkedin.com/in/abdulmohsenalbareed/"/>abdulmohsenalbareed</a></li>
+          <li class="git"><a class="gitc" href="https://github.com/AbdulmohsenAlbareed">AbdulmohsenAlbareed</a></li>
+          </ul>
+        </li>
+        <li>محمد اباالخيل
+          <ul>
+            <li><a class="linkdnc" href="https://www.linkedin.com/in/mohammed-abulkhail"/>mohammed-abulkhail</a></li>
+            <li class="git"><a class="gitc" href="https://github.com/Mabulkhail">Mabulkhail</a></li>
+          </ul>
+        </li>
+
+        <li>طيف الشمراني
+          <ul>
+            <li class="linkdn"><a class="linkdnc" href="https://www.linkedin.com/in/taifalshamrani"/> taifalshamrani </a></li>
+            <li class="git"><a class="gitc" href="https://github.com/Taef-alshamrani">Taef-alshamrani</a></li>
+          </ul>
+        </li>
+
+        <li>ريان العوفي
+          <ul>
+            <li class="linkdn"><a class="linkdnc" href="https://www.linkedin.com/in/rynhb/"/>rynhb</a></li>
+            <li class="git"><a class="gitc" href="https://github.com/RynHb">RynHb</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      </div>
+      </section>
+    </main>
+    <footer>
+      <strong>جميع الحقوق محفوظة</strong>
+      <ul>
+        <li><a href="#">اتفاقية الاستخدام</a></li>
+        <li><a href="#">سياسة الخصوصية</a></li>
+        <li><a href="#">اتصل بنا</a></li>
+      </ul>
+    </footer>
+
+    <script>
+
+
+      function goToChatbot() {
+        document.querySelector("#WhoUsPage").style.display = "none";
+        document.querySelector("#landingPage").style.display = "none";
+        document.querySelector("#chatbotPage").style.display = "flex";
+      }
+      function goToLanding() {
+        document.querySelector("#landingPage").style.display = "flex";
+        document.querySelector("#WhoUsPage").style.display = "none";
+        document.querySelector("#chatbotPage").style.display = "none";
+      }
+
+      function goToWhoUs() {
+        document.querySelector("#WhoUsPage").style.display = "flex";
+        document.querySelector("#landingPage").style.display = "none";
+        document.querySelector("#chatbotPage").style.display = "none";
+      }
+    </script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
